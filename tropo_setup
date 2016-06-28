@@ -1,0 +1,30 @@
+
+echo Please provide basic details on your Cisco Tropo Account.
+echo
+echo "What is your Tropo Account Username: "
+read tropo_user
+echo
+echo "What is your Tropo Account Password: "
+echo "  * Input hidden"
+read -s tropo_pass
+
+export TROPO_USER="$tropo_user"
+export TROPO_PASS="$tropo_pass"
+
+
+echo
+echo "Here are some possible prefix options to use. "
+echo "  (wait up to 5 seconds for list)"
+python tropo_utils.py listprefixes 10
+echo " "
+echo "What is your the phone number prefix you want for the Tropo Number: "
+echo "Include country code and area code, no spaces, no +."
+read tropo_prefix
+echo
+
+
+export TROPO_PREFIX="$tropo_prefix"
+
+echo "Tropo Application 'myherodemo' will be setup if doesn't exist. "
+echo "A number in prefix $TROPO_PREFIX will be added if doesn't exist"
+

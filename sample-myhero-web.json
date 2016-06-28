@@ -1,0 +1,30 @@
+{
+    "container": {
+        "type": "DOCKER",
+        "docker": {
+            "image": "hpreston/myhero_web:latest",
+            "forcePullImage": true,
+            "network": "BRIDGE",
+            "portMappings": [{
+                "containerPort": 5000,
+                "hostPort": 0
+            }]
+        },
+        "forcePullImage": true
+    },
+    "healthChecks": [{
+        "protocol": "TCP",
+        "portIndex": 0
+    }],
+    "labels": {
+        "app-grp": "my-hero"
+    },
+    "id": "/DEPLOYMENTNAME/web",
+    "instances": 2,
+    "cpus": 0.2,
+    "mem": 64,
+    "env": {
+        "myhero_app_server": "http://DEPLOYMENTNAME-app.MANTLDOMAIN",
+        "myhero_app_key": "SecureApp"
+    }
+}

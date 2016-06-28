@@ -1,0 +1,59 @@
+
+echo Please provide basic details on your Mantl install.
+echo
+echo "What is the address of your Control Servers?  "
+default_ctrl="mantlsandbox.cisco.com"
+echo "eg: control.mantl.internet.com (default:$default_ctrl)"
+read control_address
+if [ -z "$control_address" ]
+  then
+    control_address=$default_ctrl
+fi
+echo $control_address
+
+echo "What is the port of your Control Servers?  "
+default_port="443"
+echo "eg: 80, 8080 (default: $default_port)"
+read control_port
+  if [ -z "$control_port" ]
+    then
+      control_port=$default_port
+  fi
+echo
+
+echo "What is the username for your Mantl account?  "
+read mantl_user
+echo
+echo
+echo "What is the password for your Mantl account?  "
+echo "  * Input hidden"
+read -s mantl_password
+echo
+echo
+echo "What is the Traefik domain for your deployed apps?  "
+default_domain="app.mantldevnetsandbox.com"
+echo "eg: edge.mantl.internet.com (default:$default_domain)"
+read mantl_domain
+if [ -z "$mantl_domain" ]
+  then
+    mantl_domain=$default_domain
+fi
+echo
+
+
+export MANTL_CONTROL="$control_address"
+export MANTL_PORT="$control_port"
+export MANTL_USER="$mantl_user"
+export MANTL_PASSWORD="$mantl_password"
+export MANTL_DOMAIN="$mantl_domain"
+
+echo
+echo "What do you want your deployment to be named?  "
+echo "For example, with a name of \"myhero\", you will visit http://myhero-web.$MANTL_DOMAIN to view the application"
+read deployment_name
+echo
+
+export DEPLOYMENT_NAME="$deployment_name"
+
+echo "Marathon API calls will be sent to: "
+echo "https://$MANTL_CONTROL:$MANTL_PORT/"
