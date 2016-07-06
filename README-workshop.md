@@ -21,25 +21,30 @@ Following are the prerequisites for the attendees.
 - GIT and CURL installed.
 - Standard Web browser
 
-## Application overview
-
-![MyHero Demo Application](diagrams/myhero-demo-i1.png)
-
 ## UI walkthrough
 
-Open a web browser and open "https://mantlsandbox.cisco.com" enter credentials as given.
+Open "https://mantlsandbox.cisco.com" on web browser and enter credentials as provided, this will open Mantl UI. On this page you will see different tiles for Mesos, Martahon, Consul and Traefik which are the core open source technologies used by Mantl. Please click on these  tiles one by one to explore these technologies.   
 
-What
-Explanation about Mesos, Martahon, Consul and Traefik.
+## Application deployment on Mantl
 
-## Environment setup
-
-Environment setup is the first step which will setup Mantl endpoints and credentials to sign in to the Mantl UI.
+### Get MyHero application
 
 How:
-Run "source myhero_setup" to enter and record the deployment name, address, application domain, username, and password for your Mantl instance as non-persistent Environment Variables. This means you will need to run this command everytime you open an new terminal session.
 
-## Deploy my-hero-app on Mantl
+Open a Linux shell/terminal and run "git clone https://github.com/CiscoCloud/clus-my-hero-app", this will download the application from the git repository to the clus-my-hero-app directory.
+
+### Environment setup
+
+Environment setup is the first step to interact with Mantl API, this will setup Mantl endpoints and credentials to sign in to the Mantl UI.
+
+How:
+From the same terminal/shell move to "clus-my-hero-app" directory and Run "source myhero_setup" to enter and record the deployment name, address, application domain, username, and password for your Mantl instance as non-persistent Environment Variables. This means you will need to run this command everytime you open an new terminal session.
+
+Note:
+
+Please do not close this terminal/shell.
+
+### Deploy my-hero-app on Mantl
 
 How:
 Run ./myhero-install.sh to deploy all three services (data, app, web) to your Mantl cluster.
@@ -52,34 +57,42 @@ You should be able to reach the web interface for the application at http://DEPL
 
 ## UI walkthrough with my-hero-app
 
-What:
+Open "https://mantlsandbox.cisco.com" on web browser and enter credentials as provided, this will open Mantl UI. On this page you will see different tiles for Mesos, Martahon, Consul and Traefik which are the core open source technologies used by Mantl.
 
-Explanation on
+1. Click on the Mesos tile and look at the tasks, you will fins task related to the application name you have give while setting up the environemt.
 
+2. Click on Marathon tile to open Marathon UI, here you can investigate individual services from the MyHero application. Click on the "Configuration" tab to explore about the service configuration. You can scale up/down the service from this tab.
+
+Note: Please ask help from the Cisco engineers if needed.    
 
 
 ## Use of REST API
 
-Run "source myhero-cmd.sh" to setup the
+Mantl provide REST APIs to access its individual components (Mesos, Marathon etc...), REST APIs are good for integration purpose. For the ease of this session we have created a CLI (command line interface) which uses Mantl REST APIs to interact with Mantl. To use the CLI you have to set CLI environment.   
+
+How:
+
+Run "source myhero-cmd.sh" from the same linux shell to setup the environment.
 
 ### List Applications
 
-Run "myhero_list_apps" to list the application you just deployed.
+
+Run "myhero_list_apps" to list the application you have just deployed. This will return response in JSON format.
 
 
 ### Get Application details
 
-Run "myhero_get_app"
+Run "myhero_get_app" command to get the details about application.
 
 ### Scale UP the application
 
-myhero_scale_up_web
+Run "myhero_scale_up_web" command to scale up the application, it will prompt to you current number of instance.  
 
 ### Scale down the application
 
-myhero_scale_down_web
+Run "myhero_scale_down_web" command to scale down the application.
 
-## Destroy Application
+## Destroy MyHero Application
 
 In this steps we will destroy the application along with all micro-services from the Mantl cluster.
 
@@ -90,9 +103,3 @@ Run ./myhero-uninstall.sh to remove all three services from Marathon.
 Note:
 
 You can verify the current state using REST API or using the Mantl UI.
-
-
-
-
-
-## Remove my-hero-app from Mantl
