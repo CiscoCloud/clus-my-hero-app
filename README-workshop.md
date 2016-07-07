@@ -63,7 +63,7 @@ Application URL was give at the environment setup step.
 
 # Section 3: Application Management
 
-## Mantl UI walkthrough with my-hero-app
+## 3.1 Mantl UI walkthrough with my-hero-app
 
 Open "https://mantlsandbox.cisco.com" on web browser and enter credentials as provided, this will open Mantl UI. On this page you will see different tiles for Mesos, Martahon, Consul and Traefik which are the core open source technologies used by Mantl.
 
@@ -75,7 +75,7 @@ Open "https://mantlsandbox.cisco.com" on web browser and enter credentials as pr
 Please ask help from the Cisco engineers if needed.    
 
 
-## Use of REST API
+## 3.2 Use of REST API
 
 Mantl provide REST APIs to access its individual components (Mesos, Marathon etc...), REST APIs are good for integration purpose. To make this session easy we have created a CLI (command line interface) which uses Mantl REST APIs to interact with Mantl. To use the CLI you have to set CLI environment.   
 
@@ -83,24 +83,24 @@ Mantl provide REST APIs to access its individual components (Mesos, Marathon etc
 
 Run "source myhero-cmd.sh" from the same linux shell/terminal to setup the environment.
 
-### List Applications
+### 3.2.1 List Applications
 
 Run "myhero_list_apps" to list the application you have just deployed. This will return response in JSON format.
 
 
-### Get Application details
+### 3.2.2 Get Application details
 
 Run "myhero_get_app" command to get the details about application.
 
-### Scale UP the application
+### 3.2.3 Scale UP application
 
 Run "myhero_scale_up_web" command to scale up the application, it will prompt to you current number of instance.  
 
-### Scale down the application
+### 3.2.4 Scale down application
 
 Run "myhero_scale_down_web" command to scale down the application.
 
-## Destroy MyHero Application
+## 3.3 Destroy MyHero Application
 
 In this steps we will destroy the application along with all micro-services from the Mantl cluster.
 
