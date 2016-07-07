@@ -14,7 +14,7 @@ In this workshop we will be using "MyHero App" application which is being develo
 
 # Section 2: Application Deployment
 
-## Prerequisites
+## 2.1 Prerequisites
 
 Following are the prerequisites for the attendees.
 
@@ -22,21 +22,21 @@ Following are the prerequisites for the attendees.
 - GIT and CURL installed.
 - Standard Web browser.
 
-## Mantl UI walkthrough
+## 2.2 Mantl UI walkthrough
 
 Open "https://mantlsandbox.cisco.com" on web browser and enter credentials as provided, this will open Mantl UI. On this page you will see different tiles for Mesos, Martahon, Consul and Traefik which are the core open source technologies used by Mantl. Please click on these  tiles one by one to explore these technologies.
 
 #### Note: More information provide over workshop.   
 
-## Application deployment on Mantl
+## 2.3 Application deployment on Mantl
 
-### Download MyHero application
+### 2.3.1 Download MyHero application
 
 #### How:
 
 Open a Linux shell/terminal and run "git clone https://github.com/CiscoCloud/clus-my-hero-app", this will download the application from the git repository to clus-my-hero-app directory.
 
-### Environment setup
+### 2.3.2 Environment setup
 
 Environment setup is the first step to interact with Mantl API, this will setup Mantl endpoints and credentials to sign in to the Mantl UI.
 
@@ -46,14 +46,14 @@ From the same terminal/shell move to "clus-my-hero-app" directory and run "sourc
 #### Note:
 Please do not close this terminal/shell.
 
-### Deploy my-hero-app on Mantl
+### 2.3.3 Deploy my-hero-app on Mantl
 
 #### How:
 Run ./myhero-install.sh to deploy all three services (data, app, web) to your Mantl cluster.
 
 After running the install it will take a 2-5 minutes for all three services to fully deploy and become "healthy". You can monitor this in the Marathon Web GUI.
 
-## Access the my-hero-app
+### 2.3.4 Access the my-hero-app
 
 You should be able to reach the web interface for the application at http://DEPLOYMENTNAME-web.YOUR-DOMAIN where DEPLOYMENTNAME refers to the deployment name provided at setup and YOUR-DOMAIN refers to the wildcard domain configured for Traefik.
 
