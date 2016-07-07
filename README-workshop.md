@@ -2,7 +2,7 @@
 
 This workshop is designed for Cisco Live "Devnet Workshop - Mantl: How to use it" session. In this workshop you will learn how to use Mantl to deploy your micro-services application and how to manage the application using Cisco's Mantl platform. In this workshop we expect attendees have basic knowledge of containers, micro-services architecture and REST APIs.  
 
-## Application overview
+# Section 1: Application overview
 
 In this workshop we will be using "MyHero App" application which is being developed with micro-services paradigm to demonstrate Mantl capabilities. MyHero App is a simple application which allow users to vote for their favorite super hero and gather the voting results. The application is built in a microservice style wrapping each service in a docker container that can be deployed and run on Mantl.  In its initial form the application has three services.
 
@@ -12,6 +12,7 @@ In this workshop we will be using "MyHero App" application which is being develo
 
 ![MyHero Demo Application](diagrams/myhero-demo-i1.png)
 
+# Section 2: Application Deployment
 
 ## Prerequisites
 
@@ -21,7 +22,7 @@ Following are the prerequisites for the attendees.
 - GIT and CURL installed.
 - Standard Web browser.
 
-## UI walkthrough
+## Mantl UI walkthrough
 
 Open "https://mantlsandbox.cisco.com" on web browser and enter credentials as provided, this will open Mantl UI. On this page you will see different tiles for Mesos, Martahon, Consul and Traefik which are the core open source technologies used by Mantl. Please click on these  tiles one by one to explore these technologies.
 
@@ -60,7 +61,9 @@ You should be able to reach the web interface for the application at http://DEPL
 
 Application URL was give at the environment setup step.
 
-## UI walkthrough with my-hero-app
+# Section 3: Application Management
+
+## Mantl UI walkthrough with my-hero-app
 
 Open "https://mantlsandbox.cisco.com" on web browser and enter credentials as provided, this will open Mantl UI. On this page you will see different tiles for Mesos, Martahon, Consul and Traefik which are the core open source technologies used by Mantl.
 
