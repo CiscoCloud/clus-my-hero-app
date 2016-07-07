@@ -1,6 +1,6 @@
 # Devnet Workshop - Mantl: How to use it.
 
-This workshop is designed for Cisco Live "Devnet Workshop - Mantl: How to use it" session. In this workshop you will learn how to use Mantl to deploy your micro-services application and how to manage the application using Cisco's Mantl platform. In this workshop we expect attendees have basic knowledge of containers, micro-services architecture and REST APIs.  
+This README is designed for Cisco Live "Devnet Workshop - Mantl: How to use it" session. In this workshop you will learn how to deploy  micro-services application and manage the application on Cisco's Mantl platform. In this workshop we expect attendees have basic knowledge of containers, micro-services architecture and REST APIs.  
 
 # Section 1: Application overview
 
