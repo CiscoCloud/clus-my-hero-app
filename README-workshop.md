@@ -1,10 +1,10 @@
 # Devnet Workshop - Mantl: How to use it.
 
-This README is designed for Cisco Live "Devnet Workshop - Mantl: How to use it" DEVNET-2030 session. In this workshop you will learn how to deploy  micro-services application and manage the application on Cisco's Mantl platform. In this workshop we expect attendees have basic knowledge of containers, micro-services architecture and REST APIs. This README is struct following three section 
+This README is designed for Cisco Live "Devnet Workshop - Mantl: How to use it" DEVNET-2030 session. In this workshop you will learn how to deploy  micro-services application and manage the application on Cisco's Mantl platform. In this workshop we expect attendees have basic knowledge of containers, micro-services architecture and REST APIs. This README is structured in following three sections.
 
-1. Application Overview - In section we will explain the 
-2. Application Deployment
-3. Application Management
+1. Application Overview - This section talks about the "MY Hero" application, architecture and micro-services used to compose the application.
+2. Application Deployment - This section starts with Mantl UI walkthrough and also covers application deployment on Mantl cluster.
+3. Application Management - This section covers how to manage application life cycle using Mantl UI and REST APIs.
 
 
 # 1: Application Overview
