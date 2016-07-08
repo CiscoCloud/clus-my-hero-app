@@ -1,8 +1,13 @@
 # Devnet Workshop - Mantl: How to use it.
 
-This README is designed for Cisco Live "Devnet Workshop - Mantl: How to use it" session. In this workshop you will learn how to deploy  micro-services application and manage the application on Cisco's Mantl platform. In this workshop we expect attendees have basic knowledge of containers, micro-services architecture and REST APIs.  
+This README is designed for Cisco Live "Devnet Workshop - Mantl: How to use it" DEVNET-2030 session. In this workshop you will learn how to deploy  micro-services application and manage the application on Cisco's Mantl platform. In this workshop we expect attendees have basic knowledge of containers, micro-services architecture and REST APIs. This README is struct following three section 
 
-# Section 1: Application overview
+1. Application Overview - In section we will explain the 
+2. Application Deployment
+3. Application Management
+
+
+# 1: Application Overview
 
 In this workshop we will be using "MyHero App" application which is being developed with micro-services paradigm to demonstrate Mantl capabilities. MyHero App is a simple application which allow users to vote for their favorite super hero and gather the voting results. The application is built in a microservice style wrapping each service in a docker container that can be deployed and run on Mantl.  In its initial form the application has three services.
 
@@ -12,7 +17,7 @@ In this workshop we will be using "MyHero App" application which is being develo
 
 ![MyHero Demo Application](diagrams/myhero-demo-i1.png)
 
-# Section 2: Application Deployment
+# 2: Application Deployment
 
 ## 2.1 Prerequisites
 
@@ -61,7 +66,7 @@ You should be able to reach the web interface for the application at http://DEPL
 
 Application URL was give at the environment setup step.
 
-# Section 3: Application Management
+# 3: Application Management
 
 ## 3.1 Mantl UI walkthrough with my-hero-app
 
@@ -75,7 +80,7 @@ Open "https://mantlsandbox.cisco.com" on web browser and enter credentials as pr
 Please ask help from the Cisco engineers if needed.    
 
 
-## 3.2 Use of REST API
+## 3.2 Using Mantl REST API
 
 Mantl provide REST APIs to access its individual components (Mesos, Marathon etc...), REST APIs are good for integration purpose. To make this session easy we have created a CLI (command line interface) which uses Mantl REST APIs to interact with Mantl. To use the CLI you have to set CLI environment.   
 
