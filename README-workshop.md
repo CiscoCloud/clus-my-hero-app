@@ -7,7 +7,7 @@ This README is designed for Cisco Live "Devnet Workshop - Mantl: How to use it" 
 3. Application Management - This section covers how to manage application life cycle using Mantl UI and REST APIs.
 
 
-# 1: Application Overview
+# 1 Application Overview
 
 In this workshop we will be using "MyHero App" application which is being developed with micro-services paradigm to demonstrate Mantl capabilities. MyHero App is a simple application which allow users to vote for their favorite super hero and gather the voting results. The application is built in a microservice style wrapping each service in a docker container that can be deployed and run on Mantl.  In its initial form the application has three services.
 
@@ -17,7 +17,7 @@ In this workshop we will be using "MyHero App" application which is being develo
 
 ![MyHero Demo Application](diagrams/myhero-demo-i1.png)
 
-# 2: Application Deployment
+# 2 Application Deployment
 
 ## 2.1 Prerequisites
 
@@ -66,7 +66,7 @@ You should be able to reach the web interface for the application at http://DEPL
 
 Application URL was give at the environment setup step.
 
-# 3: Application Management
+# 3 Application Management
 
 ## 3.1 Mantl UI walkthrough with my-hero-app
 
