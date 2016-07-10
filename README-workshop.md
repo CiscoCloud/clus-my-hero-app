@@ -24,7 +24,7 @@ In this workshop we will be using "MyHero App" application which is being develo
 Following are the prerequisites for the attendees.
 
 - Linux operating system based laptop (Cygwin may also work for MS Windows users).
-- GIT and CURL installed.
+- CURL installed.
 - Standard Web browser.
 
 ## 2.2 Mantl UI walkthrough
@@ -39,17 +39,17 @@ Open "https://mantlsandbox.cisco.com" on web browser and enter credentials as pr
 
 #### How:
 
-Open a Linux shell/terminal and run "git clone https://github.com/CiscoCloud/clus-my-hero-app", this will download the application from the git repository to clus-my-hero-app directory.
+Open a web browser and paste "https://github.com/CiscoCloud/clus-my-hero-app/archive/master.zip", this will download the "clus-my-hero-app-master.zip" file. Extract the archive file, this will create "clus-my-hero-app-master" directory which will have all required files for my-hero-app.
 
 ### 2.3.2 Environment setup
 
-Environment setup is the first step to interact with Mantl API, this will setup Mantl endpoints and credentials to sign in to the Mantl UI.
+Environment setup is the first step to interact with Mantl API, this will setup Mantl endpoints and credentials to sign in to the Mantl APIs.
 
 #### How:
-From the same terminal/shell move to "clus-my-hero-app" directory and run "source myhero_setup" to enter and record the deployment name, address, application domain, username, and password for your Mantl instance as non-persistent Environment Variables. This means you will need to run this command everytime you open an new terminal session.
+Open a terminal/shell and move to "clus-my-hero-app-master" directory and run "source myhero_setup" to enter and record the deployment name, address, application domain, username, and password for your Mantl instance as non-persistent environment Variables.
 
 #### Note:
-Please do not close this terminal/shell.
+Please do not close this terminal/shell otherwise you will need to run this command again.
 
 ### 2.3.3 Deploy my-hero-app on Mantl
 
