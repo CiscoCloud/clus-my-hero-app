@@ -1,6 +1,9 @@
-# Devnet Workshop - Mantl: How to use it.
+# Devnet Workshop 2030 - Mantl: How to use it.
 
-This README is designed for Cisco Live "Devnet Workshop - Mantl: How to use it" DEVNET-2030 session. In this workshop you will learn how to deploy  micro-services applications and manage them on Cisco's Mantl platform. In this workshop we expect attendees have basic knowledge of containers, microservices architecture and REST APIs. This README is divided in following three sections.
+Welcome to Cisco Live! US 2016. 
+This is the guide for session DevNET-2030: "Devnet Workshop - Mantl: How to use it". 
+
+In this workshop you will learn how to deploy  micro-services applications and manage them on Cisco's Mantl platform. In this workshop we expect attendees have basic knowledge of containers, microservices architecture and REST APIs. This README is divided in following three sections.
 
 1. Application Overview - This section talks about the "My Hero" application, architecture and micro-services used to compose the application.
 2. Application Deployment - This section starts with Mantl UI walkthrough and covers application deployment on Mantl cluster.
@@ -9,7 +12,10 @@ This README is designed for Cisco Live "Devnet Workshop - Mantl: How to use it" 
 
 # 1 Application Overview
 
-In this workshop we will be using "MyHero App" application which is being developed with microservices paradigm to demonstrate Mantl capabilities. MyHero App is a simple application which allow users to vote for their favorite super hero and gather the voting results. The application is built in a microservice style wrapping each service in a docker container that can be deployed and run on Mantl.  In its initial form the application has three services.
+In this workshop we will be using "MyHero App" a simple web app, broken into a small number of 'microservices-like' components; to demonstrate Mantl capabilities. The MyHero App allows users to vote for their favorite super hero and gather the voting results. 
+The application is pre-built in a microservice style and each service is packaged in a docker container; ready for deployment on Mantl.  
+
+In its most basic form, the application has three services.
 
 1. [myhero/data](https://github.com/hpreston/myhero_data) - This service stores all the data about candidates and votes cast.
 2. [myhero/app](https://github.com/hpreston/myhero_app) - This service provides the basic logic layer for accessing and recording votes.
@@ -26,12 +32,12 @@ Following are the prerequisites for the attendees to use the Postman collection.
 
 - Google Chrome web browser.
 - Google Chrome Postman extension. (Installation instructions: https://www.getpostman.com/docs/introduction)
+- OR -
+- The Postman standalone application.
 
 ## 2.2 Mantl UI walkthrough
 
-Open "https://mantlsandbox.cisco.com" on web browser and enter credentials as provided, this will open Mantl UI. On this page you will see different tiles for Mesos, Martahon, Consul and Traefik which are the core open source technologies used by Mantl. Please click on these  tiles one by one to explore these technologies.
-
-#### Note: More information provide over workshop.   
+You should already have access to the Mantl UI, displaying different tiles for Mantl components such as Mesos, Martahon, Consul and Traefik which are the core open source technologies used by Mantl. You can click on these  tiles one by one to explore these technologies, also notice the healchecks for each component built into Mantl and surfaced via the UI.
 
 ## 2.3 Application deployment on Mantl
 
