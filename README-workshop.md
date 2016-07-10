@@ -1,15 +1,15 @@
 # Devnet Workshop - Mantl: How to use it.
 
-This README is designed for Cisco Live "Devnet Workshop - Mantl: How to use it" DEVNET-2030 session. In this workshop you will learn how to deploy  micro-services application and manage the application on Cisco's Mantl platform. In this workshop we expect attendees have basic knowledge of containers, micro-services architecture and REST APIs. This README is structured in following three sections.
+This README is designed for Cisco Live "Devnet Workshop - Mantl: How to use it" DEVNET-2030 session. In this workshop you will learn how to deploy  micro-services applications and manage them on Cisco's Mantl platform. In this workshop we expect attendees have basic knowledge of containers, microservices architecture and REST APIs. This README is divided in following three sections.
 
-1. Application Overview - This section talks about the "MY Hero" application, architecture and micro-services used to compose the application.
-2. Application Deployment - This section starts with Mantl UI walkthrough and also covers application deployment on Mantl cluster.
+1. Application Overview - This section talks about the "My Hero" application, architecture and micro-services used to compose the application.
+2. Application Deployment - This section starts with Mantl UI walkthrough and covers application deployment on Mantl cluster.
 3. Application Management - This section covers how to manage application life cycle using Mantl UI and REST APIs.
 
 
-# 1: Application Overview
+# 1 Application Overview
 
-In this workshop we will be using "MyHero App" application which is being developed with micro-services paradigm to demonstrate Mantl capabilities. MyHero App is a simple application which allow users to vote for their favorite super hero and gather the voting results. The application is built in a microservice style wrapping each service in a docker container that can be deployed and run on Mantl.  In its initial form the application has three services.
+In this workshop we will be using "MyHero App" application which is being developed with microservices paradigm to demonstrate Mantl capabilities. MyHero App is a simple application which allow users to vote for their favorite super hero and gather the voting results. The application is built in a microservice style wrapping each service in a docker container that can be deployed and run on Mantl.  In its initial form the application has three services.
 
 1. [myhero/data](https://github.com/hpreston/myhero_data) - This service stores all the data about candidates and votes cast.
 2. [myhero/app](https://github.com/hpreston/myhero_app) - This service provides the basic logic layer for accessing and recording votes.
@@ -17,13 +17,13 @@ In this workshop we will be using "MyHero App" application which is being develo
 
 ![MyHero Demo Application](diagrams/myhero-demo-i1.png)
 
-# 2: Application Deployment
+# 2 Application Deployment
 
 ## 2.1 Prerequisites
 
 Following are the prerequisites for the attendees.
 
-- Linux operating system based laptop (Cygwin may also work).
+- Linux operating system based laptop (Cygwin may also work for MS Windows users).
 - GIT and CURL installed.
 - Standard Web browser.
 
@@ -66,7 +66,7 @@ You should be able to reach the web interface for the application at http://DEPL
 
 Application URL was give at the environment setup step.
 
-# 3: Application Management
+# 3 Application Management
 
 ## 3.1 Mantl UI walkthrough with my-hero-app
 
