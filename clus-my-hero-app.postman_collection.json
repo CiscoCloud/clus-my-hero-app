@@ -17,20 +17,8 @@
 			"collectionId": "f6f49619-2d9b-87cc-69fa-2a7aa1955a74"
 		},
 		{
-			"id": "2a4bd2d4-7ef3-90cb-6c22-2e9194163794",
-			"name": "2-myhero-uninstall",
-			"description": "remove my_hero app, data and web",
-			"order": [
-				"4bda52c2-d042-ffd2-f1a6-90324ec4a019",
-				"0f718e0a-6572-7c7a-0ba6-d5559e686f43",
-				"2cb0ee5d-c95b-d205-77d1-37ff46047bc2"
-			],
-			"owner": "175231",
-			"collectionId": "f6f49619-2d9b-87cc-69fa-2a7aa1955a74"
-		},
-		{
 			"id": "60e251ae-5b02-df76-650c-1d89c98e58b0",
-			"name": "3-app-management",
+			"name": "2-app-management",
 			"description": "",
 			"order": [
 				"f036870f-fd32-9832-2899-fb9f2c94c508",
@@ -40,7 +28,20 @@
 				"4b01966f-59dd-8616-98bb-fe88b2c30e9e",
 				"4caa01af-1288-b135-5e24-84923c37f83f"
 			],
-			"owner": "175231"
+			"owner": "175231",
+			"collectionId": "f6f49619-2d9b-87cc-69fa-2a7aa1955a74"
+		},
+		{
+			"id": "2a4bd2d4-7ef3-90cb-6c22-2e9194163794",
+			"name": "3-myhero-uninstall",
+			"description": "remove my_hero app, data and web",
+			"order": [
+				"4bda52c2-d042-ffd2-f1a6-90324ec4a019",
+				"0f718e0a-6572-7c7a-0ba6-d5559e686f43",
+				"2cb0ee5d-c95b-d205-77d1-37ff46047bc2"
+			],
+			"owner": "175231",
+			"collectionId": "f6f49619-2d9b-87cc-69fa-2a7aa1955a74"
 		}
 	],
 	"timestamp": 1468099249523,
