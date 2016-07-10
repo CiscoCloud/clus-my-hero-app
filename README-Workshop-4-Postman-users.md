@@ -41,8 +41,8 @@ Open "https://mantlsandbox.cisco.com" on web browser and enter credentials as pr
 
 Download following two files locally.
 
-1. Environment File: https://github.com/CiscoCloud/clus-my-hero-app/blob/master/CLUS_MANTL.postman_environment.json
-2. Mantl Collections File: https://github.com/CiscoCloud/clus-my-hero-app/blob/master/clus-my-hero-app.postman_collection.json
+1. Environment File: https://raw.githubusercontent.com/CiscoCloud/clus-my-hero-app/master/CLUS_MANTL.postman_environment.json
+2. Mantl Collections File: https://raw.githubusercontent.com/CiscoCloud/clus-my-hero-app/master/clus-my-hero-app.postman_collection.json
 
 Open Postman application and import Environment and Collection files.
 
@@ -53,10 +53,10 @@ Open Postman application and import Environment and Collection files.
 Open Environment management tab from the postman UI and click on "CLUS_MANTL" Environment. Update modify the following environment variables as needed (Please consult Cisco engineers).
 
 - MANTL_CONTROL: Mantl control API endpoint (####).
-- MANTL_USER: Username to authenticate (####)
-- MANTL_PASSWORD: Password to authenticate (#####)
+- MANTL_USER: Username to authenticate ("admin")
+- MANTL_PASSWORD: Password to authenticate ("Helloclus2016")
 - DEPLOYMENTNAME: Choose a name for your application (e.g. myHero1, heroVotingApp).
-- MANTLDOMAIN: DNS name to access the deployed application (#####)
+- MANTLDOMAIN: DNS name to access the deployed application ("dev.clus2016.mantl.io")
 
 
 ### 2.3.3 Deploy my-hero-app on Mantl
