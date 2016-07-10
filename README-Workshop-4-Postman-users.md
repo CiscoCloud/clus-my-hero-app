@@ -17,7 +17,6 @@ In this workshop we will be using "MyHero App" application which is being develo
 
 ![MyHero Demo Application](diagrams/myhero-demo-i1.png)
 
-# need to change the below content for postman users
 
 # 2 Application Deployment
 
@@ -26,7 +25,7 @@ In this workshop we will be using "MyHero App" application which is being develo
 Following are the prerequisites for the attendees to use the Postman collection.
 
 - Google Chrome web browser.
-- Google Chrome Postman extension. (https://www.getpostman.com/docs/introduction)
+- Google Chrome Postman extension. (Installation instructions: https://www.getpostman.com/docs/introduction)
 
 ## 2.2 Mantl UI walkthrough
 
@@ -43,7 +42,7 @@ Open "https://mantlsandbox.cisco.com" on web browser and enter credentials as pr
 Download following two files locally.
 
 1. Environment File: https://github.com/CiscoCloud/clus-my-hero-app/blob/master/CLUS_MANTL.postman_environment.json
-2. Mantl Collection File: https://github.com/CiscoCloud/clus-my-hero-app/blob/master/clus-my-hero-app.postman_collection.json
+2. Mantl Collections File: https://github.com/CiscoCloud/clus-my-hero-app/blob/master/clus-my-hero-app.postman_collection.json
 
 Open Postman application and import Environment and Collection files.
 
@@ -93,23 +92,23 @@ Please ask help from the Cisco engineers if needed.
 
 ## 3.2 Using Mantl REST API
 
-Mantl provide REST APIs to access its individual components (Mesos, Marathon etc...), REST APIs are good for integration purpose. To make this session easy we have created a bunch of postman collections under "2-app-management" folder.
+Mantl provide REST APIs to access its individual components (Mesos, Marathon etc...). To make this session easy we have created a bunch of postman collections under "2-app-management" folder.
 
 ### 3.2.1 List Applications
 
-Run/Send "1-list_apps" to list the services you have just deployed. This will return response in JSON format.
+Run/Send Button "1-list_apps" to list the services you have just deployed. This will return response in JSON format.
 
 ### 3.2.2 Get Application details
 
-Run/Send "2-get_myhero_web" command to get the details about "myhero_web" service. Look at the response there is only one instance ( "instances": 1) of the service is running.
+Run/Send Button "2-get_myhero_web" command to get the details about "myhero_web" service. Look at the response there is only one instance ( "instances": 1) of the service is running.
 
 ### 3.2.3 Scale UP application
 
-Currently there is only one instance ( "instances": 1) of the service is running for "myhero_web", to scale up this service open "5-sacle_up_myhero_web" REST request and open the "Body" tab from Postman request tab. Change the instances to 3 {"instances":3} and run/send the request. This will spin up 2 more instance of the "myhero_web" service. You can scale other service a neded.
+Currently there is only one instance ( "instances": 1) of the service is running for "myhero_web", to scale up this service open "5-sacle_up_myhero_web" REST request and open the "Body" tab from Postman request tab. Change the instances to 3 {"instances":3} and run/Send Button the request. This will spin up 2 more instance of the "myhero_web" service. You can scale other service a neded.
 
 ### 3.2.4 Scale down application
 
-To scale down the service open "6-sacle_down_myhero_web" postman request and change the instance to 1 ({"instances":1}) and run/send the request. This will bring down service "myhero_web" back to one.
+To scale down the service open "6-sacle_down_myhero_web" postman request and change the instance to 1 ({"instances":1}) and run/Send Button the request. This will bring down service "myhero_web" back to one.
 
 ## 3.3 Destroy MyHero Application
 
@@ -117,7 +116,7 @@ In this steps we will destroy the application along with all micro-services from
 
 ####How:
 
-Run/Send requests 1-uninstall_myhero_web, 2-uninstall_myhero_data and  3-uninstall_myhero_app from Postman folder "3-myhero-uninstall" to remove all three services from Marathon.
+Run/Send Button requests 1-uninstall_myhero_web, 2-uninstall_myhero_data and  3-uninstall_myhero_app from Postman folder "3-myhero-uninstall" to remove all three services from Marathon.
 
 ####Note:
 
