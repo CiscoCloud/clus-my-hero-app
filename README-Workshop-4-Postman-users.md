@@ -23,11 +23,10 @@ In this workshop we will be using "MyHero App" application which is being develo
 
 ## 2.1 Prerequisites
 
-Following are the prerequisites for the attendees.
+Following are the prerequisites for the attendees to use the Postman collection.
 
-- Linux operating system based laptop (Cygwin may also work for MS Windows users).
-- CURL installed.
-- Standard Web browser.
+- Google Chrome web browser.
+- Google Chrome Postman extension. (https://www.getpostman.com/docs/introduction)
 
 ## 2.2 Mantl UI walkthrough
 
@@ -37,28 +36,38 @@ Open "https://mantlsandbox.cisco.com" on web browser and enter credentials as pr
 
 ## 2.3 Application deployment on Mantl
 
-### 2.3.1 Download MyHero application
+### 2.3.1 Import Mantl Postman collection on Chrome Postman application.
 
 #### How:
 
-Open a web browser and paste "https://github.com/CiscoCloud/clus-my-hero-app/archive/master.zip", this will download the "clus-my-hero-app-master.zip" file. Extract the archive file, this will create "clus-my-hero-app-master" directory which will have all required files for my-hero-app.
+Download following two files locally.
 
-### 2.3.2 Environment setup
+1. Environment File: https://github.com/CiscoCloud/clus-my-hero-app/blob/master/CLUS_MANTL.postman_environment.json
+2. Mantl Collection File: https://github.com/CiscoCloud/clus-my-hero-app/blob/master/clus-my-hero-app.postman_collection.json
 
-Environment setup is the first step to interact with Mantl API, this will setup Mantl endpoints and credentials to sign in to the Mantl APIs.
+Open Postman application and import Environment and Collection files.
+
+### 2.3.2 Update Environment variables
 
 #### How:
-Open a terminal/shell and move to "clus-my-hero-app-master" directory and run "source myhero_setup" to enter and record the deployment name, address, application domain, username, and password for your Mantl instance as non-persistent environment Variables.
 
-#### Note:
-Please do not close this terminal/shell otherwise you will need to run this command again.
+Open Environment management tab from the postman UI and click on "CLUS_MANTL" Environment. Update modify the following environment variables as needed (Please consult Cisco engineers).
+
+- MANTL_CONTROL: Mantl control API endpoint (####).
+- MANTL_USER: Username to authenticate (####)
+- MANTL_PASSWORD: Password to authenticate (#####)
+- DEPLOYMENTNAME: Choose a name for your application (e.g. myHero1, heroVotingApp).
+- MANTLDOMAIN: DNS name to access the deployed application (#####)
+
 
 ### 2.3.3 Deploy my-hero-app on Mantl
 
 #### How:
-Run ./myhero-install.sh to deploy all three services (data, app, web) to your Mantl cluster.
 
-After running the install it will take a 2-5 minutes for all three services to fully deploy and become "healthy". You can monitor this in the Marathon Web GUI.
+On the Postman application go to "clus-my-hero-app > 1-myhero-install" folder and run (Send button) "1-install_myhero_data", "2-install_myhero_app" and "3-install_myhero_web" in order. This will install three micro services on Mantl cluster.
+
+####Nate:
+Go to Marathon UI to check if the services are deployed fully. Usually it takes couple of minutes to deploy.
 
 ### 2.3.4 Access the my-hero-app
 
@@ -66,7 +75,7 @@ You should be able to reach the web interface for the application at http://DEPL
 
 #### Note:
 
-Application URL was give at the environment setup step.
+Application URL was give at the environment setup step. It can also be found from the Traefik console.
 
 # 3 Application Management
 
@@ -84,28 +93,23 @@ Please ask help from the Cisco engineers if needed.
 
 ## 3.2 Using Mantl REST API
 
-Mantl provide REST APIs to access its individual components (Mesos, Marathon etc...), REST APIs are good for integration purpose. To make this session easy we have created a CLI (command line interface) which uses Mantl REST APIs to interact with Mantl. To use the CLI you have to set CLI environment.   
-
-#### How:
-
-Run "source myhero-cmd.sh" from the same linux shell/terminal to setup the environment.
+Mantl provide REST APIs to access its individual components (Mesos, Marathon etc...), REST APIs are good for integration purpose. To make this session easy we have created a bunch of postman collections under "2-app-management" folder.
 
 ### 3.2.1 List Applications
 
-Run "myhero_list_apps" to list the application you have just deployed. This will return response in JSON format.
-
+Run/Send "1-list_apps" to list the services you have just deployed. This will return response in JSON format.
 
 ### 3.2.2 Get Application details
 
-Run "myhero_get_app" command to get the details about application.
+Run/Send "2-get_myhero_web" command to get the details about "myhero_web" service. Look at the response there is only one instance ( "instances": 1) of the service is running.
 
 ### 3.2.3 Scale UP application
 
-Run "myhero_scale_up_web" command to scale up the application, it will prompt to you current number of instance.  
+Currently there is only one instance ( "instances": 1) of the service is running for "myhero_web", to scale up this service open "5-sacle_up_myhero_web" REST request and open the "Body" tab from Postman request tab. Change the instances to 3 {"instances":3} and run/send the request. This will spin up 2 more instance of the "myhero_web" service. You can scale other service a neded.
 
 ### 3.2.4 Scale down application
 
-Run "myhero_scale_down_web" command to scale down the application.
+To scale down the service open "6-sacle_down_myhero_web" postman request and change the instance to 1 ({"instances":1}) and run/send the request. This will bring down service "myhero_web" back to one.
 
 ## 3.3 Destroy MyHero Application
 
@@ -113,8 +117,8 @@ In this steps we will destroy the application along with all micro-services from
 
 ####How:
 
-Run ./myhero-uninstall.sh to remove all three services from Marathon.
+Run/Send requests 1-uninstall_myhero_web, 2-uninstall_myhero_data and  3-uninstall_myhero_app from Postman folder "3-myhero-uninstall" to remove all three services from Marathon.
 
 ####Note:
 
-You can verify the current state using REST API or using the Mantl UI.
+You can verify the current state of services using 1-get_myhero_data, 2-get_myhero_app and 3-get_myhero_web REST requests or using the Mantl UI.
