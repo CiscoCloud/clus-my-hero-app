@@ -59,6 +59,10 @@ Open Postman application and import Environment and Collection files.
 
 ### 2.3.2 Update Environment variables
 
+Each of you will be deploying onto the same cluster, plus, you may want to use the postman scripts against a different mantl cluster in future. So we have split out some of the changing information into variables which you can set for the workshop.
+
+Things like ```DEPLOYMENTNAME``` for example, because we dont want all of you trying to create an app with the same name!
+
 #### How:
 
 Open Environment management tab from the postman UI and click on "CLUS_MANTL" Environment. Update modify the following environment variables as needed (Please consult Cisco engineers).
@@ -73,7 +77,7 @@ Open Environment management tab from the postman UI and click on "CLUS_MANTL" En
 
 #### How:
 
-On the Postman application go to "clus-my-hero-app > 1-myhero-install" folder and run (Send button) "1-install_myhero_data", "2-install_myhero_app" and "3-install_myhero_web" in order. This will install three micro services on Mantl cluster.
+On the Postman application go to ```clus-my-hero-app > 1-myhero-install``` folder and run (Send button) ```1-install_myhero_data```, ```2-install_myhero_app``` and ```3-install_myhero_web``` in order. Each request to the API will deploy one of the application components.
 
 ### 2.3.4 Access the my-hero-app
 
