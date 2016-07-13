@@ -67,7 +67,7 @@ Things like ```DEPLOYMENTNAME``` for example, because we dont want all of you tr
 
 Open Environment management tab from the postman UI and click on "CLUS_MANTL" Environment. Update modify the following environment variables as needed (Please consult Cisco engineers).
 
-- MANTL_CONTROL: Mantl control API endpoint (cirrus.clus2016.mantl.io).
+- MANTL_CONTROL: Mantl control API endpoint (cumulus.clus2016.mantl.io).
 - MANTL_USER: Username to authenticate ("admin")
 - MANTL_PASSWORD: Password to authenticate ("Helloclus2016")
 - DEPLOYMENTNAME: Use your first ane lastname (e.g. nospaces).
